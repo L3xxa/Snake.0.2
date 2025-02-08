@@ -1,7 +1,12 @@
-﻿#pragma once
+﻿#ifndef FONTMANAGER_H
+#define FONTMANAGER_H
 
-class FontManager
-{
+#include <SFML/Graphics.hpp>
+#include <string>
+
+class FontManager {
 public:
-    
+    bool loadFont(const std::string& filename, sf::Font& font);
 };
+
+#endif
