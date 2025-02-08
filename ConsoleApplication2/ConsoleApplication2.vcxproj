@@ -155,11 +155,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication2.cpp" />
+    <ClCompile Include="Data\FontManager.cpp" />
+    <ClCompile Include="Data\SoundManager.cpp" />
+    <ClCompile Include="Domain\Food.cpp" />
+    <ClCompile Include="Domain\Game.cpp" />
+    <ClCompile Include="Domain\Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Domain\" />
     <Folder Include="Presentation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Data\FontManager.h" />
+    <ClInclude Include="Data\SoundManager.h" />
+    <ClInclude Include="Domain\Food.h" />
+    <ClInclude Include="Domain\Game.h" />
+    <ClInclude Include="Domain\Snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
