@@ -163,9 +163,6 @@
     <ClCompile Include="Domain\Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presentation\" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Data\FontManager.h" />
     <ClInclude Include="Data\SoundManager.h" />
     <ClInclude Include="Domain\Food.h" />
@@ -174,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
