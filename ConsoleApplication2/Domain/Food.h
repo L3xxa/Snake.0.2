@@ -1,7 +1,10 @@
-﻿#pragma once
+﻿#ifndef FOOD_H
+#define FOOD_H
 
-class Food
-{
-public:
+struct Food {
+    int x, y;
     
+    void spawnFood(int width, int height, int size);
 };
+
+#endif
