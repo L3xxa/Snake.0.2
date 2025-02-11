@@ -1,5 +1,4 @@
-﻿// Game.cpp
-#include "Game.h"
+﻿#include "Game.h"
 #include "Food.h"
 #include "../Presentation/Render.h"
 #include <SFML/Graphics.hpp>
@@ -17,9 +16,11 @@ Game::Game(int width, int height, int size)
     food.spawnFood(width, height, size);
 }
 
+
 void Game::update() {
     if (gameOver) return;
 
+    // Переміщення змії, отримуємо напрямок через методи getDirectionX та getDirectionY
     snake.move(directionX * size, directionY * size);
 
     if (snake.getBody().front().x == food.x && snake.getBody().front().y == food.y) {
@@ -28,7 +29,7 @@ void Game::update() {
         food.spawnFood(width, height, size);
     }
 
-    // Check for boundary collision
+    // Перевірка на зіткнення з межами
     if (snake.getBody().front().x < 0 || snake.getBody().front().y < 0 ||
         snake.getBody().front().x >= width || snake.getBody().front().y >= height) {
         gameOver = true;
@@ -39,6 +40,11 @@ void Game::update() {
 void Game::setDirection(int dx, int dy) {
     directionX = dx;
     directionY = dy;
+}
+
+void Game::getDirection(int& dx, int& dy) const {
+    dx = directionX;
+    dy = directionY;
 }
 
 bool Game::isGameOver() const {

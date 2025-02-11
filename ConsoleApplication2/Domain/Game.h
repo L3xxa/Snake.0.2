@@ -1,5 +1,4 @@
-﻿
-#ifndef GAME_H
+﻿#ifndef GAME_H
 #define GAME_H
 
 #include "Snake.h"
@@ -16,6 +15,11 @@ public:
     bool isGameOver() const;
     void handleInput(sf::Event& event);
     void setDirection(int dx, int dy);
+    void getDirection(int& dx, int& dy) const;
+    // Додайте ці методи до класу Game
+    int getDirectionX() const { return directionX; }
+    int getDirectionY() const { return directionY; }
+
 
     const Snake& getSnake() const { return snake; }
     const Food& getFood() const { return food; }

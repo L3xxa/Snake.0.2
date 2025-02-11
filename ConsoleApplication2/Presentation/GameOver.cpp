@@ -1,5 +1,4 @@
-﻿
-#include "GameOver.h"
+﻿#include "GameOver.h"
 #include "../Data/FontManager.h"
 #include <iostream>
 
