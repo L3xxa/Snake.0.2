@@ -161,6 +161,7 @@
     <ClCompile Include="Domain\Food.cpp" />
     <ClCompile Include="Domain\Game.cpp" />
     <ClCompile Include="Domain\Snake.cpp" />
+    <ClCompile Include="Presentation\GameOver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Data\FontManager.h" />
@@ -168,12 +169,10 @@
     <ClInclude Include="Domain\Food.h" />
     <ClInclude Include="Domain\Game.h" />
     <ClInclude Include="Domain\Snake.h" />
+    <ClInclude Include="Presentation\GameOver.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation\" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
