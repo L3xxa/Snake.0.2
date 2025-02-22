@@ -1,14 +1,26 @@
 ﻿#include "SoundManager.h"
-#include <iostream>
 
-bool SoundManager::loadSound(const std::string& filename, sf::SoundBuffer& buffer) {
+void SoundManager::playSound(const std::string& filename, sf::SoundBuffer& buffer) {
     if (!buffer.loadFromFile(filename)) {
-        std::cout << "Failed to load sound: " << filename << std::endl;
-        return false;
+        // Handle error
     }
-    return true;
+    sf::Sound sound;
+    sound.setBuffer(buffer);
+    sound.play();
 }
 
-void SoundManager::playSound(sf::Sound& sound) {
-    sound.play();
+void SoundManager::playSoundLoop(const std::string& filename, sf::SoundBuffer& buffer) {
+    if (!buffer.loadFromFile(filename)) {
+        // Handle error
+    }
+    sf::Sound* sound = new sf::Sound();
+    sound->setBuffer(buffer);
+    sound->setLoop(true);
+    sound->play();
+}
+
+void SoundManager::loadSound(const std::string& filename, sf::SoundBuffer& buffer) {
+    if (!buffer.loadFromFile(filename)) {
+        // Handle error
+    }
 }
