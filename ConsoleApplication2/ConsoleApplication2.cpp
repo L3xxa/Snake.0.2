@@ -17,7 +17,7 @@ int main() {
     sf::SoundBuffer startBuffer;
     sf::Sound startSound;
 
-    soundManager.loadSound("assets/Start.wav", startBuffer);
+    soundManager.loadSound("assets/moving.wav", startBuffer);
     startSound.setBuffer(startBuffer);
     startSound.play();
 
